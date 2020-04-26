@@ -35,7 +35,7 @@ app.use(compression());
 
 //mongoDBConection
 mongoose.set('useCreateIndex', true)
-mongoose.connect('mongodb://localhost/playground', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
   console.log('MongoDB connected');
 })
