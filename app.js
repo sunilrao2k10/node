@@ -61,5 +61,5 @@ if(process.env.NODE_ENV !== 'development'){
     startupDebugger('morgan on');
 }
 
-const port = process.env.PORTS || 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => { console.log(`Post lis listing ${port}`)});
