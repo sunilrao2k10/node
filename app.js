@@ -54,7 +54,7 @@ app.use('/api/customers', customers);
 app.use('/api/genres', genres);
 app.use('/api/users', user);
 app.use('/api/auth', auth);
-app.use(error);
+app.use(error); 
 
 if(process.env.NODE_ENV !== 'development'){    
     app.use(morgan('tiny'));
