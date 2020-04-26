@@ -35,8 +35,7 @@ app.use(compression());
 
 //mongoDBConection
 //mongoose.set('useCreateIndex', true)
-console.log(process.env.DB);
-mongoose.connect(process.env.DB,{
+mongoose.connect(process.env.MONGO_URI,{    
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology:true
@@ -57,7 +56,7 @@ app.use('/api/users', user);
 app.use('/api/auth', auth);
 app.use(error);
 
-if(process.env.ENV !== 'development'){    
+if(process.env.NODE_ENV !== 'development'){    
     app.use(morgan('tiny'));
     startupDebugger('morgan on');
 }
