@@ -1,0 +1,7 @@
+{
+    "name": "my app production",
+    "mail":{
+        "host" : "prod-mail-server"
+    },
+    "jwtPrivateKey": ""
+}

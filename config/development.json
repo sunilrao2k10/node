@@ -1,0 +1,7 @@
+{
+    "name": "my app Development",
+    "mail":{
+        "host" : "dev-mail-server"
+    },
+    "jwtPrivateKey": ""
+}
