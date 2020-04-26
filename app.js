@@ -35,6 +35,7 @@ app.use(compression());
 
 //mongoDBConection
 //mongoose.set('useCreateIndex', true)
+console.log(process.env.DB);
 mongoose.connect(process.env.DB,{
     useNewUrlParser: true,
     useCreateIndex: true,
