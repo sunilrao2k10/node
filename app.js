@@ -36,12 +36,9 @@ app.use(compression());
 //mongoDBConection
 //mongoose.set('useCreateIndex', true)
 mongoose.connect(process.env.DB,{
-  auth: {
-    user: 'playgrounduser',
-    password: '100%blank',
     useNewUrlParser: true,
-    useCreateIndex: true
-  },  
+    useCreateIndex: true,
+    useUnifiedTopology:true
 })
 .then(()=>{
   console.log('MongoDB connected');
